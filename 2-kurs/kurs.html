@@ -1,0 +1,83 @@
+<!--SITI NURCHOLIS-->
+<!--0110120009-->
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Konversi Mata Uang</title>
+</head>
+
+<body>
+    <br><br><br>
+    <h1 align="center">Aplikasi Konversi Mata Uang</h1><br>
+    <table border="1" align="center" width="700" height="100">
+        <tr>
+            <class="h" align="center" width="700" height="200">
+                <th align="center"> Masukkan Nilai </th>>
+                <th align="center"> Valas </th>>
+                <th align="center"> Nilai Rupiah </th>>
+                </class>
+        </tr>
+        <tr>
+            <class="" align="center" width="700" height="100">
+                <td align="center"><input type="number" class="input" id="nama"><br>
+                    <button class="hitung">Hitung</button>
+
+                    <td align="center">
+                        <select class="kurs">
+                    <option value="">-Pilih Mata Uang-</option>
+                    <option value="usd">Dollar US</option>
+                    <option value="sgd">Dollar Singapore</option>
+                    <option value="ringgit">Ringgit Malaysia</option>
+                    <option value="yen">Yen Jepang</option>
+                    <option value="eur">Euro</option>
+                    <option value="riyal">Riyal Arab Saudi</option>
+                    </select>
+                    </td>
+                    <td align="center" class="hasil">Hasil : </td>
+                    </class>
+        </tr>
+    </table>
+    <script>
+        const input = document.querySelector(".input");
+        const kursSelect = document.querySelector(".kurs");
+        const hitungBtn = document.querySelector(".hitung");
+        const hasil = document.querySelector(".hasil");
+
+        function formattingMataUang(angka) {
+            const hasil = new intl.NumberFormat(['ban', 'id']).format(angka);
+            return hasil;
+        }
+
+        hitungBtn.addEventListener("click", function() {
+            if (kursSelect.value == "usd") {
+                hasil.innerHTML = "Hasil : Rp. " + input.value * 9915
+
+            } else if (kursSelect.value == "sgd") {
+                hasil.innerHTML = "Hasil : Rp. " + input.value * 13472
+
+            } else if (kursSelect.value == "ringgit") {
+                hasil.innerHTML = "Hasil : Rp. " + input.value * 874
+
+            } else if (kursSelect.value == "yen") {
+                hasil.innerHTML = "Hasil : Rp. " + input.value * 120
+
+            } else if (kursSelect.value == "eur") {
+                hasil.innerHTML = "Hasil : Rp. " + input.value * 15888
+
+            } else if (kursSelect.value == "riyal") {
+                hasil.innerHTML = "Hasil : Rp. " + input.value * 3592
+
+            }
+        })
+        hitungBtn.addEventListener("submit", function() {
+            console.log("input.value");
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!--SITI NURCHOLIS-->
+<!--0110120009-->
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>ChatBox Javascript</title>
+
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #00c853;
+            margin: 0px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        #chat {
+            border-radius: 5px 5px 0px 0px;
+        }
+        
+        #kirim {
+            color: #000000;
+            position: fixed;
+            padding: 0px;
+            bottom: 0px;
+            right: 0px;
+            width: 50px;
+        }
+        
+        #msg {
+            color: #000000;
+            position: fixed;
+            padding: 0px;
+            bottom: 0px;
+            left: 0px;
+            width: 250px;
+        }
+    </style>
+    <br><br><br>
+    <p id="chat">Chat Box</p>
+    <table>
+        <tr>
+            <td>
+                <input type="text" name="msg" id="msg" style="height: 20px; width: 1225px;"></td>
+            <td>
+                <button id="kirim" onclick="chat()" style="height: 20px;">Kirim</button>
+            </td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        function chat() {
+
+            let x = document.getElementById('msg').value;
+            let y = document.getElementById('chat');
+
+            y.innerHTML = y.innerHTML + "<br>" + x;
+        }
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,55 @@
+<!--SITI NURCHOLIS-->
+<!--0110120009-->
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pilih Hadiah Gratis</title>
+</head>
+
+<body>
+    <select onchange="Pilih_hadiah(this.value)">
+        <option value="uang">Uang tunai 100jt rupiah</option>
+        <option value="umroh">Umroh untuk 2 orang</option>
+        <option value="mobil">Alphard</option>
+        <option value="motor">Nmax</option>
+        <option value="hp">iPhone</option>
+        <option value="laptop">MacBook</option>
+        <option value="emas">Emas murni 100gr</option>
+    </select> <br>
+    <img src="" id="gambar" alt="">
+    <script>
+        function Pilih_hadiah(set) {
+            var photo
+            if (set == 'uang') {
+                photo = "uang.png"
+                alert('Selamat anda mendapatkan uang tunai 100jt rupiah')
+            } else if (set == 'umroh') {
+                photo = "umroh.jpg"
+                alert('Selamat anda mendapatkan hadiah paket umroh untuk 2 orang')
+            } else if (set == 'mobil') {
+                photo = "Toyota_Alphard_L_1.jpg"
+                alert('Selamat anda mendapatkan Toyota Alphard')
+            } else if (set == 'motor') {
+                photo = "motor.jpg"
+                alert('Selamat anda mendapatkan Yamaha Nmax')
+            } else if (set == 'hp') {
+                photo = "iPhone-X.png"
+                alert('Selamat anda mendapatkan iPhone X')
+            } else if (set == 'laptop') {
+                photo = "laptop.png"
+                alert('Selamat anda mendapatkan MacBook')
+            } else if (set == 'iniemas') {
+                photo = "emas.png"
+                alert('Selamat anda mendapatkan Emas Murni 100gr')
+            }
+            console.log(photo);
+            document.getElementById("gambar").src = photo
+        }
+    </script>
+
+</body>
+
+</html>

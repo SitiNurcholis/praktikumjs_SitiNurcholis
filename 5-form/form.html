@@ -1,0 +1,110 @@
+<!--SITI NURCHOLIS-->
+<!--0110120009-->
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background: #50c7c7;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        h2 {
+            color: gray;
+        }
+        
+        .login {
+            padding: auto;
+            margin: auto;
+            width: 25em;
+            background: #fff;
+            border-radius: 3px;
+        }
+        
+        label {
+            font-size: 10pt;
+            color: #383434;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        time {
+            padding: 8px;
+            width: 95%;
+            background: #efefef;
+            border: 0;
+            font-size: 10pt;
+            margin: 6px 0px;
+        }
+        
+        .button {
+            background: #3498db;
+            color: #fff;
+            border: 0;
+            padding: 5px 8px;
+        }
+    </style>
+    <form methode="post" action="success.html" onsubmit="Validasi()">
+
+        <fieldset class="login" id="FORM KEBERANGKATAN">
+
+            <hr></hr>
+            <h2 align="center">PASSENGER FORM
+                </align>
+            </h2>
+            <hr></hr>
+            <table>
+                <h4>Passenger Identity
+                </h4>
+                <tr>
+                    <td><label for="Nama">Nama Lengkap</label></td>
+                    <td><input type="text" name="nama" id="nama" maxlength="30" style="height: 10px; width: 250px;"></td>
+                </tr>
+                <tr>
+                    <td><label for="Email">E-mail</label></td>
+                    <td><input type="email" name="email" id="email" style="height: 10px; width: 250px;"></td>
+                </tr>
+                <tr>
+                    <td><label for="TimeFlight">Jam Keberangkatan</label></td>
+                    <td><input type="time" name="time" id="time"></td>
+                </tr>
+                <tr>
+                    <td><label for="Destination">Tujuan Keberangkatan</label></td>
+                    <td><input type="text" name="destinasi" id="destinasi" style="height: 10px; width: 250px;"></td>
+                </tr>
+                <tr>
+                    <td><label for="Ticket">Jumlah Tiket</label></td>
+                    <td><input type="number" name="tiket" id="tiket" maxlength="2" min="1" max="10"></td>
+                </tr>
+            </table>
+            <br><br>
+            <button class="button">Submit</button>
+        </fieldset>
+    </form>
+</body>
+<script type="text/javascript">
+    function Validasi() {
+        var nama = document.getElementById("nama").value;
+        var email = document.getElementById("email").value;
+        var time = document.getElementById("time").value;
+        var destinasi = document.getElementById("destinasi").value;
+        var tiket = document.getElementById("tiket").value;
+
+        if (nama != "" && email != "" && time != "" && destinasi != "" && tiket != "") {
+            return true;
+        } else {
+            alert("Harap isi data dengan lengkap !");
+            return false;
+        }
+    }
+</script>
+
+</html>
